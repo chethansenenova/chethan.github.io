@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chethan S — Senior Executive Team Leader, B2B Sales &amp; CRM</title>
+<style>
+  :root{
+    --ink:#10151C;
+    --ink-2:#161D26;
+    --paper:#F6F3EC;
+    --signal:#E8A33D;
+    --signal-dim:#8a621f;
+    --teal:#4C8A81;
+    --slate:#8A93A3;
+    --slate-dim:#5B6474;
+    --line:#28313D;
+    --won:#4C8A81;
+    --active:#E8A33D;
+    --maxw:1080px;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:var(--ink);
+    color:var(--paper);
+    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    line-height:1.5;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:inherit;text-decoration:none;}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px;}
+  .eyebrow{
+    font-family:'SFMono-Regular', 'SF Mono', 'Cascadia Code', Consolas, 'Liberation Mono', Menlo, monospace;
+    font-size:12px;
+    letter-spacing:0.14em;
+    text-transform:uppercase;
+    color:var(--signal);
+  }
+  h1,h2,h3{font-family:'Century Gothic', Futura, Avenir, 'Trebuchet MS', sans-serif;font-weight:600;letter-spacing:-0.01em;}
+
+  /* reveal animation */
+  .reveal{opacity:0;transform:translateY(16px);transition:opacity .6s ease, transform .6s ease;}
+  .reveal.in{opacity:1;transform:translateY(0);}
+  @media (prefers-reduced-motion: reduce){
+    .reveal{transition:none;opacity:1;transform:none;}
+  }
+
+  /* NAV */
+  header{
+    position:sticky;top:0;z-index:50;
+    background:rgba(16,21,28,0.86);
+    backdrop-filter:blur(8px);
+    border-bottom:1px solid var(--line);
+  }
+  nav{
+    display:flex;align-items:center;justify-content:space-between;
+    padding:16px 28px;max-width:var(--maxw);margin:0 auto;
+  }
+  .brand{display:flex;align-items:baseline;gap:10px;}
+  .brand-name{font-family:'Century Gothic', Futura, Avenir, 'Trebuchet MS', sans-serif;font-weight:700;font-size:18px;}
+  .brand-role{font-family:'SFMono-Regular', 'SF Mono', 'Cascadia Code', Consolas, 'Liberation Mono', Menlo, monospace;font-size:11px;color:var(--slate);display:none;}
+  @media(min-width:640px){.brand-role{display:inline;}}
+  .nav-links{display:flex;gap:24px;font-size:14px;color:var(--slate);}
+  .nav-links a:hover{color:var(--paper);}
+  .nav-cta{
+    font-family:'SFMono-Regular', 'SF Mono', 'Cascadia Code', Consolas, 'Liberation Mono', Menlo, monospace;font-size:12px;
+    border:1px solid var(--signal);color:var(--signal);
+    padding:7px 14px;border-radius:2px;white-space:nowrap;
+    transition:background .2s, color .2s;
+  }
+  .nav-cta:hover{background:var(--signal);color:var(--ink);}
+  @media(max-width:640px){.nav-links{display:none;}}
+
+  /* HERO */
+  .hero{padding:88px 0 64px;position:relative;overflow:hidden;}
+  .hero::before{
+    content:"";position:absolute;top:-120px;right:-160px;width:480px;height:480px;
+    background:radial-gradient(circle,rgba(232,163,61,0.10),transparent 70%);
+    pointer-events:none;
+  }
+  .hero-eyebrow{margin-bottom:18px;}
+  .hero h1{
+    font-size:clamp(34px,5.6vw,58px);
+    line-height:1.05;
+    max-width:820px;
+  }
+  .hero h1 span{color:var(--signal);}
+  .hero p.lede{
+    margin-top:22px;max-width:600px;font-size:17px;color:var(--slate);
+  }
+  .hero-actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:32px;}
+  .btn-primary{
+    font-family:'SFMono-Regular', 'SF Mono', 'Cascadia Code', Consolas, 'Liberation Mono', Menlo, monospace;font-size:13px;
+    background:var(--signal);color:var(--ink);padding:12px 20px;border-radius:2px;
+    font-weight:500;transition:transform .15s ease, background .15s ease;
+  }
+  .btn-primary:hover{transform:translateY(-2px);background:#f0b25c;}
+  .btn-ghost{
+    font-family:'SFMono-Regular', 'SF Mono', 'Cascadia Code', Consolas, 'Liberation Mono', Menlo, monospace;font-size:13px;
+    border:1px solid var(--line);color:var(--paper);padding:12px 20px;border-radius:2px;
+    transition:border-color .15s ease;
+  }
+  .btn-ghost:hover{border-color:var(--slate);}
+
+  /* KPI strip */
+  .kpi-strip{
+    display:grid;grid-template-columns:repeat(2,1fr);
+    border:1px solid var(--line);border-radius:4px;margin-top:56px;overflow:hidden;
+  }
+  @media(min-width:760px){.kpi-strip{grid-template-columns:repeat(4,1fr);}}
+  .kpi{
+    padding:22px 20px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);
+    background:var(--ink-2);
+  }
+  .kpi:nth-child(2n){border-right:none;}
+  @media(min-width:760px){
+    .kpi:nth-child(2n){border-right:1px solid var(--line);}
+    .kpi:nth-child(4n){border-right:none;}
+    .kpi{border-bottom:none;}
+  }
+  .kpi-num{
+    font-family:'Century Gothic', Futura, Avenir, 'Trebuchet MS', sans-serif;font-weight:700;font-size:30px;color:var(--signal);
+  }
+  .kpi-label{
+    font-family:'SFMono-Regular', 'SF Mono', 'Cascadia Code', Consolas, 'Liberation Mono', Menlo, monospace;font-size:11.5px;color:var(--slate);
+    margin-top:6px;letter-spacing:0.02em;line-height:1.4;
+  }
+
+  /* SECTION shared */
+  section{padding:76px 0;}
+  .section-head{margin-bottom:44px;max-width:640px;}
+  .section-head h2{font-size:clamp(26px,3.4vw,36px);margin-top:10px;}
+  .section-head p{color:var(--slate);margin-top:12px;font-size:15px;}
+  .divider{border-top:1px solid var(--line);}
+
+  /* PIPELINE */
+  .pipeline-scroll{
+    display:flex;gap:18px;overflow-x:auto;padding-bottom:12px;
+    scroll-snap-type:x proximity;
+    margin:0 -28px;padding-left:28px;padding-right:28px;
+  }
+  .deal-card{
+    scroll-snap-align:start;
+    flex:0 0 300px;
+    background:var(--ink-2);
+    border:1px solid var(--line);
+    border-radius:6px;
+    padding:22px;
+    display:flex;flex-direction:column;gap:14px;
+  }
+  .deal-card.active{border-color:var(--signal);box-shadow:0 0 0 1px rgba(232,163,61,0.25) inset;}
+  .deal-top{display:flex;justify-content:space-between;align-items:flex-start;gap:10px;}
+  .deal-status{
+    font-family:'SFMono-Regular', 'SF Mono', 'Cascadia Code', Consolas, 'Liberation Mono', Menlo, monospace;font-size:10.5px;letter-spacing:0.08em;
+    padding:3px 8px;border-radius:20px;white-space:nowrap;
+  }
+  .status-won{background:rgba(76,138,129,0.16);color:var(--teal);border:1px solid rgba(76,138,129,0.4);}
+  .status-active{background:rgba(232,163,61,0.16);color:var(--signal);border:1px solid rgba(232,163,61,0.4);}
+  .deal-dates{font-family:'SFMono-Regular', 'SF Mono', 'Cascadia Code', Consolas, 'Liberation Mono', Menlo, monospace;font-size:11px;color:var(--slate-dim);}
+  .deal-role{font-family:'Century Gothic', Futura, Avenir, 'Trebuchet MS', sans-serif;font-size:17px;font-weight:600;line-height:1.25;}
+  .deal-org{font-size:13px;color:var(--slate);margin-top:2px;}
+  .deal-bullets{list-style:none;display:flex;flex-direction:column;gap:8px;font-size:13.5px;color:#cfd3da;}
+  .deal-bullets li{padding-left:14px;position:relative;}
+  .deal-bullets li::before{content:"—";position:absolute;left:0;color:var(--slate-dim);}
+  .deal-tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:auto;}
+  .tag{
+    font-family:'SFMono-Regular', 'SF Mono', 'Cascadia Code', Consolas, 'Liberation Mono', Menlo, monospace;font-size:10.5px;color:var(--slate);
+    border:1px solid var(--line);padding:3px 8px;border-radius:20px;
+  }
+  .scroll-hint{font-family:'SFMono-Regular', 'SF Mono', 'Cascadia Code', Consolas, 'Liberation Mono', Menlo, monospace;font-size:11px;color:var(--slate-dim);margin-top:14px;}
+
+  /* SKILL STACK */
+  .stack-grid{display:grid;grid-template-columns:1fr;gap:28px;}
+  @media(min-width:760px){.stack-grid{grid-template-columns:1fr 1fr;}}
+  .stack-group{border-top:1px solid var(--line);padding-top:18px;}
+  .stack-group h3{
+    font-family:'SFMono-Regular', 'SF Mono', 'Cascadia Code', Consolas, 'Liberation Mono', Menlo, monospace;font-size:12px;letter-spacing:0.08em;
+    text-transform:uppercase;color:var(--teal);font-weight:500;margin-bottom:14px;
+  }
+  .chip-row{display:flex;flex-wrap:wrap;gap:8px;}
+  .chip{
+    font-size:13px;color:#dfe2e7;background:var(--ink-2);
+    border:1px solid var(--line);padding:6px 12px;border-radius:20px;
+  }
+
+  /* ACHIEVEMENTS */
+  .ach-grid{display:grid;grid-template-columns:1fr;gap:2px;background:var(--line);border-radius:6px;overflow:hidden;}
+  @media(min-width:760px){.ach-grid{grid-template-columns:1fr 1fr;}}
+  .ach{background:var(--ink-2);padding:26px 24px;}
+  .ach-num{font-family:'Century Gothic', Futura, Avenir, 'Trebuchet MS', sans-serif;color:var(--signal);font-size:22px;font-weight:700;}
+  .ach-text{margin-top:8px;font-size:14.5px;color:#d6dae0;}
+
+  /* EDU + LANG */
+  .lower-grid{display:grid;grid-template-columns:1fr;gap:36px;}
+  @media(min-width:760px){.lower-grid{grid-template-columns:1.3fr 1fr;}}
+  .edu-item{padding:14px 0;border-bottom:1px solid var(--line);}
+  .edu-item:last-child{border-bottom:none;}
+  .edu-degree{font-family:'Century Gothic', Futura, Avenir, 'Trebuchet MS', sans-serif;font-weight:600;font-size:15.5px;}
+  .edu-meta{font-family:'SFMono-Regular', 'SF Mono', 'Cascadia Code', Consolas, 'Liberation Mono', Menlo, monospace;font-size:11.5px;color:var(--slate-dim);margin-top:4px;}
+  .lang-chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px;}
+  .strengths-list{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px;}
+
+  /* FOOTER / CONTACT */
+  footer{border-top:1px solid var(--line);padding:64px 0 40px;}
+  .contact-head{font-size:clamp(26px,4vw,40px);max-width:640px;}
+  .contact-row{display:flex;flex-wrap:wrap;gap:28px;margin-top:28px;font-size:15px;}
+  .contact-row a{border-bottom:1px solid var(--line);padding-bottom:2px;transition:border-color .15s;}
+  .contact-row a:hover{border-color:var(--signal);color:var(--signal);}
+  .foot-meta{margin-top:36px;font-family:'SFMono-Regular', 'SF Mono', 'Cascadia Code', Consolas, 'Liberation Mono', Menlo, monospace;font-size:11.5px;color:var(--slate-dim);}
+</style>
+</head>
+<body>
+
+<header>
+  <nav>
+    <div class="brand">
+      <span class="brand-name">CHETHAN S</span>
+      <span class="brand-role">SR. EXECUTIVE TEAM LEADER — B2B SALES / CRM</span>
+    </div>
+    <div class="nav-links">
+      <a href="#pipeline">Experience</a>
+      <a href="#stack">Skills</a>
+      <a href="#achievements">Achievements</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <a class="nav-cta" href="mailto:chethansklr2020@gmail.com">Get in touch</a>
+  </nav>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="wrap">
+      <div class="eyebrow hero-eyebrow">BANGALORE, INDIA · OPEN TO RELOCATE · IMMEDIATE JOINER</div>
+      <h1>Ten years closing B2B deals, running the CRM, and shipping the <span>campaign</span>.</h1>
+      <p class="lede">Senior Executive Team Leader across telecom, food-tech, and ed-tech — leading end-to-end customer journeys, sales pipelines, and digital marketing execution for growth-stage teams.</p>
+      <div class="hero-actions">
+        <a class="btn-primary" href="mailto:chethansklr2020@gmail.com">chethansklr2020@gmail.com</a>
+        <a class="btn-ghost" href="tel:+919980092563">+91 99800 92563</a>
+      </div>
+
+      <div class="kpi-strip reveal">
+        <div class="kpi">
+          <div class="kpi-num">200+</div>
+          <div class="kpi-label">B2B CLIENTS ONBOARDED IN KARNATAKA, WITHIN 2 YEARS</div>
+        </div>
+        <div class="kpi">
+          <div class="kpi-num">30%</div>
+          <div class="kpi-label">CUT IN COMPLAINT TURNAROUND TIME VIA CRM WORKFLOW REDESIGN</div>
+        </div>
+        <div class="kpi">
+          <div class="kpi-num">25%</div>
+          <div class="kpi-label">GROWTH IN REGIONAL B2B LEAD PIPELINE FROM DIGITAL CAMPAIGNS</div>
+        </div>
+        <div class="kpi">
+          <div class="kpi-num">95%+</div>
+          <div class="kpi-label">SLA COMPLIANCE SUSTAINED ACROSS A 30-MEMBER TEAM</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="pipeline">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div class="eyebrow">Work experience — read as a pipeline</div>
+        <h2>Four roles, one deal still open.</h2>
+        <p>Every stage below closed with a measurable result. The current role is the one still in motion.</p>
+      </div>
+    </div>
+    <div class="wrap">
+      <div class="pipeline-scroll">
+
+        <div class="deal-card">
+          <div class="deal-top">
+            <div>
+              <div class="deal-role">Financial Consultant</div>
+              <div class="deal-org">HDFC Life Insurance</div>
+            </div>
+            <span class="deal-status status-won">CLOSED · WON</span>
+          </div>
+          <div class="deal-dates">2015 — 2017</div>
+          <ul class="deal-bullets">
+            <li>Personalized financial consulting on insurance and investment products for individuals and corporates.</li>
+            <li>Built a lasting client portfolio through relationship management and disciplined follow-up.</li>
+            <li>Consistently hit monthly sales targets, contributing to branch revenue growth.</li>
+          </ul>
+          <div class="deal-tags"><span class="tag">Consultative Sales</span><span class="tag">Client Portfolio</span></div>
+        </div>
+
+        <div class="deal-card">
+          <div class="deal-top">
+            <div>
+              <div class="deal-role">Operations &amp; Instructor Management Associate</div>
+              <div class="deal-org">Edureka (Brain4ce Education Solutions)</div>
+            </div>
+            <span class="deal-status status-won">CLOSED · WON</span>
+          </div>
+          <div class="deal-dates">2017 — 2018</div>
+          <ul class="deal-bullets">
+            <li>Coordinated a 30-member cross-functional team across Support, Escalations, Ops, and Instructors.</li>
+            <li>Ran GoToWebinar sessions and key-mapping to schedule and track class batches.</li>
+            <li>Held ticket resolution inside TAT/SLA benchmarks; handled mid-batch instructor swaps.</li>
+          </ul>
+          <div class="deal-tags"><span class="tag">GoToWebinar</span><span class="tag">SLA Ops</span></div>
+        </div>
+
+        <div class="deal-card">
+          <div class="deal-top">
+            <div>
+              <div class="deal-role">Senior Associate — Operations &amp; CRM</div>
+              <div class="deal-org">Waycool Foods and Products</div>
+            </div>
+            <span class="deal-status status-won">CLOSED · WON</span>
+          </div>
+          <div class="deal-dates">2018 — 2020</div>
+          <ul class="deal-bullets">
+            <li>Owned CRM functions for product quality, customer satisfaction, and grievance resolution.</li>
+            <li>Issued credit notes and worked with auditors to keep financial records accurate.</li>
+            <li>Oversaw indenting, dispatch, goods inward, and inventory across multiple warehouses.</li>
+          </ul>
+          <div class="deal-tags"><span class="tag">Zoho CRM</span><span class="tag">Supply Chain</span><span class="tag">MIS</span></div>
+        </div>
+
+        <div class="deal-card active">
+          <div class="deal-top">
+            <div>
+              <div class="deal-role">Senior Executive Team Leader — Sales B2B &amp; CRM</div>
+              <div class="deal-org">Bharti Telemedia (Airtel DTH)</div>
+            </div>
+            <span class="deal-status status-active">ACTIVE · IN PROGRESS</span>
+          </div>
+          <div class="deal-dates">2021 — Present</div>
+          <ul class="deal-bullets">
+            <li>Own the full B2B sales cycle across Karnataka, from lead generation to closure.</li>
+            <li>Run CRM operations for satisfaction, complaint resolution, and service delivery via franchises.</li>
+            <li>Drive WhatsApp Business, email, and social outreach that fills the lead pipeline.</li>
+            <li>Conduct MDU site surveys and maintain MIS dashboards against sales targets.</li>
+          </ul>
+          <div class="deal-tags"><span class="tag">B2B Sales Cycle</span><span class="tag">Franchise CRM</span><span class="tag">Digital Outreach</span></div>
+        </div>
+
+      </div>
+      <div class="wrap"><div class="scroll-hint">← scroll to see all four stages →</div></div>
+    </div>
+  </section>
+
+  <div class="wrap"><div class="divider"></div></div>
+
+  <section id="stack">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div class="eyebrow">Tools in daily use</div>
+        <h2>The stack behind the pipeline.</h2>
+        <p>CRM and operations tooling on one side, a genuinely current AI-assisted marketing stack on the other.</p>
+      </div>
+
+      <div class="stack-grid">
+        <div class="stack-group">
+          <h3>CRM &amp; Operations</h3>
+          <div class="chip-row">
+            <span class="chip">Freshdesk</span><span class="chip">Zoho CRM</span><span class="chip">Zoho OMS</span>
+            <span class="chip">Gofrugal RPOS</span><span class="chip">MS Office Suite</span><span class="chip">GoToWebinar</span>
+          </div>
+        </div>
+        <div class="stack-group">
+          <h3>Digital Marketing</h3>
+          <div class="chip-row">
+            <span class="chip">Google Ads</span><span class="chip">Meta Ads Manager</span><span class="chip">Google Analytics</span>
+            <span class="chip">Canva</span><span class="chip">Mailchimp</span><span class="chip">WhatsApp Business</span><span class="chip">LinkedIn Marketing</span>
+          </div>
+        </div>
+        <div class="stack-group">
+          <h3>AI Content &amp; Copywriting</h3>
+          <div class="chip-row">
+            <span class="chip">ChatGPT</span><span class="chip">Claude AI</span><span class="chip">Jasper AI</span>
+            <span class="chip">Copy.ai</span><span class="chip">Writesonic</span><span class="chip">Google Gemini</span>
+          </div>
+        </div>
+        <div class="stack-group">
+          <h3>AI SEO &amp; Research</h3>
+          <div class="chip-row">
+            <span class="chip">Surfer SEO</span><span class="chip">Semrush AI</span><span class="chip">Ahrefs AI</span>
+            <span class="chip">Perplexity AI</span><span class="chip">Google SGE</span>
+          </div>
+        </div>
+        <div class="stack-group">
+          <h3>AI Visual &amp; Video</h3>
+          <div class="chip-row">
+            <span class="chip">Canva AI</span><span class="chip">Adobe Firefly</span><span class="chip">Midjourney</span><span class="chip">DALL·E 3</span>
+            <span class="chip">HeyGen</span><span class="chip">CapCut AI</span><span class="chip">Pictory</span><span class="chip">Descript</span><span class="chip">Veed.io</span><span class="chip">Submagic</span>
+          </div>
+        </div>
+        <div class="stack-group">
+          <h3>AI Email, CRM &amp; Automation</h3>
+          <div class="chip-row">
+            <span class="chip">HubSpot AI</span><span class="chip">Mailchimp AI</span><span class="chip">Klaviyo AI</span><span class="chip">Tidio (Lyro)</span>
+            <span class="chip">Zapier AI</span><span class="chip">Make</span><span class="chip">Gumloop</span><span class="chip">Sprout Social AI</span>
+            <span class="chip">Performance Max AI</span><span class="chip">Meta Advantage+</span><span class="chip">AdCreative.ai</span><span class="chip">Brandwatch AI</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="wrap"><div class="divider"></div></div>
+
+  <section id="achievements">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div class="eyebrow">Key achievements</div>
+        <h2>What the pipeline actually produced.</h2>
+      </div>
+      <div class="ach-grid reveal">
+        <div class="ach">
+          <div class="ach-num">200+</div>
+          <div class="ach-text">B2B clients onboarded across Karnataka for Airtel DTH within 2 years.</div>
+        </div>
+        <div class="ach">
+          <div class="ach-num">30%</div>
+          <div class="ach-text">Reduction in customer complaint TAT through improved CRM workflows.</div>
+        </div>
+        <div class="ach">
+          <div class="ach-num">25%</div>
+          <div class="ach-text">Increase in regional B2B lead pipeline from supported digital campaigns.</div>
+        </div>
+        <div class="ach">
+          <div class="ach-num">95%+</div>
+          <div class="ach-text">SLA compliance maintained at Edureka across a 30-member team.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="wrap"><div class="divider"></div></div>
+
+  <section id="profile">
+    <div class="wrap">
+      <div class="lower-grid">
+        <div class="reveal">
+          <div class="eyebrow">Education</div>
+          <div class="edu-item">
+            <div class="edu-degree">B.Com — Bangalore North University</div>
+            <div class="edu-meta">2021 – 2024 · 80%</div>
+          </div>
+          <div class="edu-item">
+            <div class="edu-degree">PUC — Govt. Junior College, Mulbagal</div>
+            <div class="edu-meta">2010 – 2012 · 47.5%</div>
+          </div>
+          <div class="edu-item">
+            <div class="edu-degree">SSLC — Govt. High School, Mulbagal</div>
+            <div class="edu-meta">2008 – 2009 · 52.72%</div>
+          </div>
+        </div>
+        <div class="reveal">
+          <div class="eyebrow">Languages</div>
+          <div class="lang-chips">
+            <span class="chip">English</span><span class="chip">Kannada</span><span class="chip">Telugu</span><span class="chip">Tamil</span><span class="chip">Hindi</span>
+          </div>
+          <div class="eyebrow" style="margin-top:32px;">Core Strengths</div>
+          <div class="strengths-list">
+            <span class="chip">Leadership &amp; Team Management</span>
+            <span class="chip">B2B Sales &amp; Client Relations</span>
+            <span class="chip">Digital Campaign Execution</span>
+            <span class="chip">Quick Learner &amp; Adaptable</span>
+            <span class="chip">Conflict Resolution</span>
+            <span class="chip">CRM &amp; Process Optimization</span>
+            <span class="chip">MIS Reporting &amp; Data Analysis</span>
+            <span class="chip">Interpersonal Communication</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer id="contact">
+  <div class="wrap">
+    <div class="eyebrow">Next stage of the pipeline</div>
+    <div class="contact-head reveal">Looking for a leadership role that rewards ownership over titles.</div>
+    <div class="contact-row">
+      <a href="mailto:chethansklr2020@gmail.com">chethansklr2020@gmail.com</a>
+      <a href="tel:+919980092563">+91 99800 92563</a>
+      <span style="color:var(--slate-dim);">Bangalore — 560049</span>
+    </div>
+    <div class="foot-meta">REFERENCES AVAILABLE ON REQUEST · OPEN TO RELOCATE · IMMEDIATE JOINER</div>
+  </div>
+</footer>
+
+<script>
+  const revealEls = document.querySelectorAll('.reveal');
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, { threshold: 0.15 });
+  revealEls.forEach(el => io.observe(el));
+</script>
+
+</body>
+</html>
